@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MaroonDesigns</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Dosis:wght@500;600;700;800&family=Roboto&family=Roboto+Slab:wght@200;300;400;600&family=Titillium+Web:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Maroon.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="LEFT">
+        <a href="#Home" class="Logo"><img src="./MARRON-LOGO-FINAL.png"></a>
+    </div>
+    <nav>
+        </a>
+        <nav>
+            <ul class="Navbar">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About us</a></li>
+                <li><a href="#How">How We Work</a></li>
+                <li><a href="#Catalog">Catalog</a></li>
+                <li><a href="#Contact">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Catalog">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="number">1 / 4</div>
+            <img src="./mtbakh2.jpg" style="max-width: 100%; height: auto;">
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="number">2 / 4</div>
+            <img src="./tvunit.jpg" style="max-width: 100%; height: auto;">
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="number">3 / 4</div>
+            <img src="./mtbakh3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="number">4 / 4</div>
+            <img src="./tv.jpg" style="width:100%">
+        </div>
+        </div>
+        <div class="word">Because You Deserve the Best</div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <div class="button">
+        <a  href="https://drive.google.com/uc?export=download&id=1GwgPoGJ4D--kpF4UN1VF_AxLiAUvUo8W" class="btn">Get Catalog</a>
+        </div>
+    </section>
+
+    <!-- <section id="Home">
+        <div class="Home-section">
+            <div class="container">
+                <div class="div-text">
+                    <h1>Nour Alaassar</h1>
+                    <span>Web Developer</span>
+                        <a target="_blank" href="https://github.com/itsalaassar" class="btn">My Work</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="How">
+        <div class="Home-section">
+            <div class="container">
+                <div class="divtext">
+                    <h1>SEE HOW WE WORK</h1>
+                    <p>To Discover the best interior for your home.</p>
+                </div>
+                <div class="steps">
+                    <h1>Planning</h1>
+                </div>
+                <div class="step-description">
+                    <h5>STEP01</h5>
+                    <p>Meeting and descussing your request.</p>
+                </div>
+                <hr class="step-divider">
+                <div class="steps">
+                    <h1>Designing</h1>
+                </div>
+                <div class="step-description">
+                    <h5>STEP02</h5>
+                    <p>Visualizing What works for you.</p>
+                </div>
+                <hr class="step-divider">
+                <div class="steps">
+                    <h1>Building</h1>
+                </div>
+                <div class="step-description">
+                    <h5>STEP03</h5>
+                    <p>Making all of it come to life.</p>
+                </div>
+                <hr class="step-divider">
+                <div class="Image">
+                    <!-- <img src="./mtbakh.jpg" alt="kitchen"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <footer class="footer">
+        <table style="width:100%">
+            <tr>
+                <th><div class="icons">
+                    <i class="fas fa-location-dot"></i>ADDRESS</div></th>
+                <th><div class="icons">
+                    <i class="fas fa-phone"></i>CALL US ON</div></th>
+                <th><div>OUR POLICIES</div></th>
+            </tr>
+            <tr>
+                <td><p> Cairo, Egypt</p></td>
+                <td><p>+20 1091933778</p></td>
+                <td>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Use</p>
+                    <p>Refund Policy</p>
+                </td>
+            </tr>
+        </table>
+    
+        <div class="powered-by">
+            <hr style="color: black;">
+            <p>© 2023 MaroonDesigns</p>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        document.getElementById("resume-link").addEventListener("click", function (event) {
+            event.preventDefault(); 
+            var resumeUrl = "https://drive.google.com/file/d/1GwgPoGJ4D--kpF4UN1VF_AxLiAUvUo8W/view?usp=sharing"; 
+            var link = document.createElement("a");
+            link.href = resumeUrl;
+            link.target = "_blank"; 
+            link.setAttribute("download", "nour's.pdf"); 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);});
+        </script>
+</body>
+</html>
+

@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>MaroonDesigns</title>
+    <title>MarronDesigns</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     </style>
 </head>
 <body class>
-    <div class="Back" id="Home">
+    <div class="Back" class="" id="Home">
         <div class="Navbar">
         <img src="./MARRON-LOGO-FINAL.png" class="Logo">
             <ul>
@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div class ='Content'>
-            <h1>Maroon Designs</h1>
+            <h1>Marron Designs</h1>
             <p> You Deserve The Best</p>
         
         <div>
@@ -188,7 +188,7 @@
     
         <div class="powered-by">
             <hr style="color: black;">
-            <p>© 2023 MaroonDesigns</p>
+            <p>© 2023 MarronDesigns</p>
         </div>
     </footer>
     <script>
@@ -221,6 +221,24 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);});
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                const homeSection = document.getElementById('Home');
+                
+                // Calculate the scroll position
+                const scrollPosition = window.scrollY;
+            
+                // Get the height of the #Home section
+                const homeSectionHeight = homeSection.offsetHeight;
+            
+                // Check if the user has scrolled past the #Home section
+                if (scrollPosition > homeSectionHeight) {
+                    navbar.classList.remove('transparent-background');
+                } else {
+                    navbar.classList.add('transparent-background');
+                }
+            });
+            
         </script>
 </body>
 </html>

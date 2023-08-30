@@ -14,7 +14,7 @@
     </style>
 </head>
 <body class>
-    <div class="Back" class="" id="Home">
+    <div class="Back" id="Home">
         <div class="Navbar">
         <img src="./MARRON-LOGO-FINAL.png" class="Logo">
             <ul>
@@ -221,23 +221,6 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);});
-            window.addEventListener('scroll', function () {
-                const navbar = document.getElementById('navbar');
-                const homeSection = document.getElementById('Home');
-                
-                // Calculate the scroll position
-                const scrollPosition = window.scrollY;
-            
-                // Get the height of the #Home section
-                const homeSectionHeight = homeSection.offsetHeight;
-            
-                // Check if the user has scrolled past the #Home section
-                if (scrollPosition > homeSectionHeight) {
-                    navbar.classList.remove('transparent-background');
-                } else {
-                    navbar.classList.add('transparent-background');
-                }
-            });
             
         </script>
 </body>
